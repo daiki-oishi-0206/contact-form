@@ -2,35 +2,12 @@
 
 ◯開発環境のクローン
 ```bash
-cd ~/coachtech/laravel
-```
-```bash
-git clone git@github.com:Estra-Coachtech/laravel-docker-template.git
-```
-```bash
-mv laravel-docker-template contact-form
+git clone git@github.com:daiki-oishi-0206/contact-form.git
 ```
 
-◯リモートURLを変更
+◯対象のディレクトリに移動
 ```bash
 cd contact-form
-```
-```bash
-git remote set-url origin 作成したリポジトリのURL
-```
-```bash
-git remote -v
-```
-
-◯ローカルリポジトリのデータをリモートに反映
-```bash
-git add .
-```
-```bash
-git commit -m "リモートリポジトリの変更"
-```
-```bash
-git push -u origin main
 ```
 
 ◯コンテナの作成・起動
@@ -79,4 +56,9 @@ php artisan key:generate
 ◯マイグレーションの実行
 ```bash
 php artisan migrate
+```
+
+◯seederの実行
+```bash
+php artisan db:seed
 ```
