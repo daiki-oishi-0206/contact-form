@@ -1,0 +1,48 @@
+.main{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.main__inner{
+    text-align: center;
+}
+
+.main__title {
+    font-size: 27px;
+}
+
+.contact__form {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto 20px;
+    width: 700px;
+}
+
+.contact__label {
+    font-weight: bold;
+    width: 200px;
+    text-align: left;
+}
+
+.contact__label p{
+    margin: 0;
+}
+
+.contact__input {
+    padding: 12px;
+    width: 500px;
+}
+
+textarea.contact__input{
+    height: 150px;
+}
+
+.contact__submit input {
+    padding: 8px;
+    width: 200px;
+    cursor: pointer;
+    color: #fff;
+    background: #000;
+    border-radius: 3px;
+}
