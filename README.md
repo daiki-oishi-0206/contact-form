@@ -62,3 +62,6 @@ php artisan migrate
 ```bash
 php artisan db:seed
 ```
+
+◯ER図
+![ER図](database-er/img/database-er.jpeg)
