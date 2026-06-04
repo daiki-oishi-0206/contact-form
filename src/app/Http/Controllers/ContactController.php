@@ -14,13 +14,13 @@ class ContactController extends Controller
     }
 
     public function confirm(ContactRequest $request){
-        $data = $request->validated();
-        return view('confirm', compact('data'));
+        $contact = $request->validated();
+        return view('confirm', compact('contact'));
     }
 
     public function store(ContactRequest $request){
-        $data = $request->validated();
-        Contact::create($data);
+        $contact = $request->validated();
+        Contact::create($contact);
         return redirect('/thanks');
     }
 

@@ -1,48 +1,134 @@
-.main{
+.main {
     max-width: 1200px;
     margin: 0 auto;
-    
+    color: #777;
 }
 
-.main__inner{
+.main-inner{
     text-align: center;
 }
 
-.main__title {
+.main-title {
     font-size: 27px;
 }
 
-.contact__form {
+.contact-form {
     display: flex;
     align-items: flex-start;
     margin: 0 auto 20px;
-    width: 700px;
+    width: 1000px;
+    gap: 100px;
 }
 
-.contact__label {
+.contact-label {
     font-weight: bold;
     width: 200px;
     text-align: left;
 }
 
-.contact__label p{
+.contact-label p{
     margin: 0;
 }
 
-.contact__input {
+.contact-item {
+    width: 700px;
+}
+
+.contact-name{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.gender-group {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 40px;
+    margin-left: 15px;
+}
+
+.contact-group{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-input {
+    width: 100%;
     padding: 12px;
-    width: 500px;
 }
 
-textarea.contact__input{
-    height: 150px;
+.email-input{
+    width: 100%;
+    padding: 12px;
 }
 
-.contact__submit input {
-    padding: 8px;
+.tel-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tel-input {
+    padding: 12px 0px;
+    text-align: center;
     width: 200px;
+}
+
+.address-input{
+    padding: 12px;
+}
+
+.building-input{
+    padding: 12px;
+}
+
+.content-group{
+    width: 350px;
+    position: relative;
+}
+
+.content-group::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    pointer-events: none;
+}
+
+.content-input {
+    padding: 12px;
+    width: 100%;
+    color: #999;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.content-input:valid {
+    color: #000;
+}
+
+textarea.detail-input{
+    height: 150px;
+    padding: 12px;
+}
+
+.contact-submit input {
+    padding: 10px;
+    width: 150px;
     cursor: pointer;
     color: #fff;
-    background: #000;
+    background: #777;
     border-radius: 3px;
+}
+
+input,
+select,
+textarea{
+    border: none;
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 12px;
 }

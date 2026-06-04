@@ -25,4 +25,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/contacts/{id}', [AdminController::class, 'show']);
     Route::delete('/contacts/{id}', [AdminController::class, 'destroy']);
 });
-    
+
+
+// 後で消して！！！
+Route::get('/confirm', function () {
+    return view('confirm');
+});
