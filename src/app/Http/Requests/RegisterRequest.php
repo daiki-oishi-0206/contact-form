@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Override;
 
-class CategoryRequest extends FormRequest
+
+class RegisterRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -31,7 +31,7 @@ class CategoryRequest extends FormRequest
         ];
     }
 
-    #[Override]
+
     public function messages()
     {
         return [

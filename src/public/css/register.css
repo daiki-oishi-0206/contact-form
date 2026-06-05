@@ -1,10 +1,9 @@
 .register-field {
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 30px 15px;
-    max-width: 1230px;
-    background: #eee;
+    background: rgb(238, 238, 238);
     min-height: 100vh;
-
+}
 
 .register-heading {
     margin-bottom: 20px;
