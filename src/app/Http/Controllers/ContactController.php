@@ -18,29 +18,19 @@ class ContactController extends Controller
         return view('confirm', compact('contact'));
     }
 
-    // public function store(ContactRequest $request){
-    //     $contact = $request->validated();
-    //     Contact::create($contact);
-    //     return redirect('/thanks');
-    // }
-
     public function store(ContactRequest $request)
     {
         $contact = $request->validated();
-
         $contact['tel'] =
             $contact['tel1'] .
             $contact['tel2'] .
             $contact['tel3'];
-
         unset(
             $contact['tel1'],
             $contact['tel2'],
             $contact['tel3']
         );
-
         Contact::create($contact);
-
         return redirect('/thanks');
     }
 

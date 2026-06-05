@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,10 @@ Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/store', [ContactController::class, 'store']);
 Route::post('/back', [ContactController::class, 'back']);
 Route::get('/thanks', [ContactController::class, 'thanks']);
+
+Route::get('/register', [RegisterController::class, 'create']);
+Route::post('/register', [RegisterController::class, 'store']);
+
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/contacts', [AdminController::class, 'index']);

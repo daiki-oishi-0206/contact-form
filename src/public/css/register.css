@@ -1,52 +1,75 @@
-.register-form__content {
+.register-field {
     margin: 0 auto;
     padding: 30px 15px;
     max-width: 1230px;
-}
+    background: #eee;
+    min-height: 100vh;
 
-.register-form__heading {
+
+.register-heading {
     margin-bottom: 20px;
     text-align: center;
+    color: #777;
+    }
+
+.register {
+    width: 600px;
+    height: 550px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45px auto;
+    padding: 80px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
 }
 
-.form {
+.register-inner {
+    width: 500px;
     margin: 0 auto;
-    width: 25%;
-    text-align: center;
 }
 
-.form__group {
+.register-group {
     margin-bottom: 5px;
 }
 
-.form__group-title {
+.register-title {
     text-align: left;
 }
 
-.form__error {
+.register-label {
+    font-size: 18px;
+    color: #555;
+}
+
+.register-error {
     height: 20px;
     color: #ff0000;
     text-align: left;
 }
 
-.form__input--text input {
+.register-input input {
     padding: 10px;
     width: 100%;
     height: 40px;
-    border: 1px solid #ddd;
     border-radius: 3px;
-
     appearance: none;
-}
-
-.form__button {
     margin-top: 20px;
+    background: #eee;
+    border: none;
+    padding: 25px;
 }
 
-.form__button-submit {
-    padding: 10px;
+.register-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.register-submit {
+    padding: 15px;
     width: 30%;
-    height: 50px;
     border: none;
     border-radius: 3px;
     background: #000;
@@ -54,7 +77,7 @@
     cursor: pointer;
 }
 
-.login__link {
+.login-link {
     margin-top: 20px;
     text-align: center;
 }
