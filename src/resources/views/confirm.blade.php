@@ -11,19 +11,19 @@
 
         @php
         $categories = [
-        'delivery' => '商品のお届けについて',
-        'exchange' => '商品の交換について',
-        'trouble' => '商品トラブル',
-        'shop' => 'ショップへのお問い合わせ',
-        'other' => 'その他',
+        1 => '商品のお届けについて',
+        2 => '商品の交換について',
+        3 => '商品トラブル',
+        4 => 'ショップへのお問い合わせ',
+        5 => 'その他',
         ];
         @endphp
 
         @php
         $genders = [
-        'male' => '男性',
-        'female' => '女性',
-        'other' => 'その他',
+        1 => '男性',
+        2 => '女性',
+        3 => 'その他',
         ];
         @endphp
 
@@ -62,7 +62,7 @@
 
             <tr class="confirm-row">
                 <th class="confirm-header">お問い合わせの種類</th>
-                <td class="confirm-data">{{ $categories[$contact['content']] }}</td>
+                <td class="confirm-data">{{ $categories[$contact['category_id']] }}</td>
             </tr>
 
             <tr class="confirm-row">
@@ -83,7 +83,7 @@
                 <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}">
                 <input type="hidden" name="address" value="{{ $contact['address'] }}">
                 <input type="hidden" name="building" value="{{ $contact['building'] ?? '' }}">
-                <input type="hidden" name="content" value="{{ $contact['content'] }}">
+                <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}">
                 <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
                 <button class="confirm-submit" type="submit">送信</button>
             </form>
@@ -98,7 +98,7 @@
                 <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}">
                 <input type="hidden" name="address" value="{{ $contact['address'] }}">
                 <input type="hidden" name="building" value="{{ $contact['building'] ?? '' }}">
-                <input type="hidden" name="content" value="{{ $contact['content'] }}">
+                <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}">
                 <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
                 <button type="submit" class="confirm-back">修正</button>
             </form>
@@ -106,4 +106,4 @@
 
     </div>
 </main>
-    @endsection
+@endsection
