@@ -24,6 +24,10 @@ class ContactController extends Controller
         return redirect('/thanks');
     }
 
+    public function back(Request $request){
+        return redirect('/')->withInput($request->all());
+    }
+
     public function thanks()
     {
         return view('thanks');

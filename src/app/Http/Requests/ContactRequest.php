@@ -33,6 +33,7 @@ class ContactRequest extends FormRequest
             'tel2' => 'required|regex:/^[0-9]+$/|max:5',
             'tel3' => 'required|regex:/^[0-9]+$/|max:5',
             'address' => 'required',
+            'building' => 'nullable',
             'content' => 'required',
             'detail' => 'required|max:120',
         ];
