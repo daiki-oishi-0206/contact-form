@@ -9,7 +9,8 @@
     <div class="login-heading">
         <h2>Login</h2>
     </div>
-    <form class="login" action="/login" method="post">
+
+    <form class="login" action="/login" method="post" novalidate>
         @csrf
         <div class="login-inner">
 
@@ -43,6 +44,11 @@
                         @error('password')
                         {{ $message }}
                         @enderror
+                        @if ($errors->has('login'))
+                        <p class="error">
+                            {{ $errors->first('login') }}
+                        </p>
+                        @endif
                     </div>
                 </div>
             </div>

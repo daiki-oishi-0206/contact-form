@@ -45,6 +45,8 @@ class ContactRequest extends FormRequest
         return [
             'last_name.required' => '姓を入力してください',
             'first_name.required' => '名を入力してください',
+            'last_name.max' => '姓は8文字以内で入力してください',
+            'first_name.max' => '名は8文字以内で入力してください',
 
             'gender.required' => '性別を入力してください',
 

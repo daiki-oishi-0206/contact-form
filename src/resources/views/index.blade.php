@@ -8,7 +8,7 @@
 <main class="main">
     <div class="main-inner">
         <h1 class="main-title">Contact</h1>
-        <form action="/confirm" class="contacts-form" method="post">
+        <form action="/confirm" class="contacts-form" method="post" novalidate>
             @csrf
 
 

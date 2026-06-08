@@ -3,10 +3,10 @@
 }
 
 .header-inner {
+    position: relative;
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
-
 }
 
 .header-utilities {
@@ -21,3 +21,19 @@
     font-size: 24px;
 }
 
+.header-link {
+    padding: 8px 20px;
+    border: 1px solid #d9c6b5;
+    background: #f5f5f5;
+    color: #d9c6b5;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.header-group {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}

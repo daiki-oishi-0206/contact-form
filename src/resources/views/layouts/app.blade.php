@@ -19,8 +19,26 @@
                     FashionablyLate
                 </a>
             </div>
+            <div class="header-group">
+                @if(request()->is('register'))
+                <a class="header-link" href="/login">login</a>
+                @endif
+
+                @if(request()->is('login'))
+                <a class="header-link" href="/register">register</a>
+                @endif
+
+                @if(request()->is('admin/*'))
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button class="header-link" type="submit">logout</button>
+                </form>
+                @endif
+            </div>
+
         </div>
     </header>
+
 
     <main>
         @yield('content')

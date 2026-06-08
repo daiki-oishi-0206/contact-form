@@ -32,8 +32,10 @@ Route::post('/login', [LoginController::class, 'store']);
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/contacts', [AdminController::class, 'index']);
+    Route::get('/contacts/export', [AdminController::class, 'export']);
     Route::get('/contacts/{id}', [AdminController::class, 'show']);
     Route::delete('/contacts/{id}', [AdminController::class, 'destroy']);
 });
 
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
